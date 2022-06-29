@@ -1,0 +1,7 @@
+astropy==5.1
+h5py==3.7.0
+matplotlib==3.5.2
+numpy==1.22.4
+pandas==1.4.2
+Shapely==1.8.2
+tfcat==0.3.1
