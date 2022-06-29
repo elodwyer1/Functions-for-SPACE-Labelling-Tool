@@ -53,12 +53,3 @@ def make_dataframe(file):
 
 file="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json"
 df=make_dataframe(file)
-
-
-
-
-#lfe_df.to_csv("C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/SPACE_labelling_tool5/saved_data/check_these_polygons.csv")
-#nolfe_df=pd.read_csv("C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/ML_nolfe_timestamps.csv", parse_dates=['start','end'])
-
-#total_df=pd.concat([lfe_df, nolfe_df]).reset_index(drop=True)
-#total_df.to_csv("C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/ML_totalimage_timestamps.csv")
