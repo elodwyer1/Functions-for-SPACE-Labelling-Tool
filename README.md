@@ -38,7 +38,7 @@ Input is the polygon file in .json format.
 ### Example of use.
 #### Example of lfe_coordinates
 file="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json" <br />
-lfe_coordinates(file)
+timestamps, freqs, feature, id_ = lfe_coordinates(file)
     
 #### Example of make_dataframe
 file="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json" <br />
