@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Jun 28 11:05:06 2022
-
-@author: eliza
-"""
 import numpy
 from tfcat import TFCat
 from shapely.geometry import MultiPoint, Point, Polygon
@@ -132,15 +126,3 @@ def find_mask(time_view_start, time_view_end, val, file_data,polygon_fp,type_):
     pyplot.show()
     
     return None
-
-tmin = '2010-01-01'
-tmax ='2010-01-05'
-time_view_start=datetime.fromisoformat(tmin)
-year=datetime.strftime(time_view_start,'%Y')
-# read the save file and copy variables
-file_data="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/input_data/SKR_{}_CJ.hdf5".format(year)
-val='s'
-polygon_fp="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json"
-type_=['LFE','LFE_m','LFE_sp','LFE_ext','LFE_sm']
-masked_image=find_mask(tmin, tmax, val, file_data, polygon_fp,type_)
-
