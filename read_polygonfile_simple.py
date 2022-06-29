@@ -1,15 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Apr 11 09:04:20 2022
-
-@author: eliza
-"""
-
 import pandas as pd
 import numpy as np
 from datetime import datetime
 from tfcat import TFCat
 
+#Function to return the co-ordinates (time in unix, frequency in kHz) of features in the polygon file, as well as their feature name and id.
 def get_data(file):
     co = []
     id_ = []
@@ -24,6 +18,8 @@ def get_data(file):
         
     return co, id_, feature
 
+#Function to return the time co-ordinates (datetime object in UTC) frequency co-ordinates (in kHz) of features in the polygon file, 
+#as well as their feature name and id.
 def lfe_coordinates(file):
     co, id_, feature = get_data(file)
     timestamps = []
@@ -45,11 +41,7 @@ def make_dataframe(file):
     start = [min(i) for i in timestamps]
     end = [max(i) for i in timestamps]
     
+    #Dataframe with start and end times of items in the polygon file, as well as their feature type and id.
     df = pd.DataFrame({'start': start, 'end':end,'label':feature,'id':id_})
     df=df.sort_values(by='start').reset_index(drop=True)
-    
-
     return df
-
-file="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json"
-df=make_dataframe(file)
