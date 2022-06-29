@@ -11,7 +11,7 @@ Code that will plot the Cassini RPWS data, with a binary mask showing only the d
       - val (parameter you'd like to plot, e.g 's' for flux density and 'v' for degree of normalised degree of circular polarisation).
       - file_data (path to the file containing the Cassini RPWS file, in .hdf5 format with time in julian day, frequency in kHz).
       - polygon_fp (path to .json file with polygons).
-      - type_ (type of feature you'd like to plot, e.g the feature name from polygon file.
+      - type_ (type of feature you'd like to plot, e.g the feature name from polygon file. Must be in the form of a list even if it's one item.)
       
 ### Example of use.
 time_view_start = '2006-01-01' <br />
