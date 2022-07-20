@@ -14,14 +14,15 @@ Code that will plot the Cassini RPWS data, with a binary mask showing only the d
       - type_ (type of feature you'd like to plot, e.g the feature name from polygon file. Must be in the form of a list even if it's one item.)
       
 ### Example of use.
-time_view_start = '2006-01-01' <br />
-time_view_end ='2006-01-05' <br />
-val='s' <br />
-file_data="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/input_data/SKR_2006_CJ.hdf5" <br />
-polygon_fp="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json" <br />
-type_=['LFE','LFE_m','LFE_sp','LFE_ext','LFE_sm'] <br />
-masked_image=find_mask(tmin, tmax, val, file_data, polygon_fp,type_) <br />
-
+```python
+time_view_start = '2006-01-01'
+time_view_end ='2006-01-05'
+val='s'
+file_data="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/input_data/SKR_2006_CJ.hdf5"
+polygon_fp="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json"
+type_=['LFE','LFE_m','LFE_sp','LFE_ext','LFE_sm']
+masked_image=find_mask(tmin, tmax, val, file_data, polygon_fp,type_)
+```
 The code above will plot this image:
 ![example](https://user-images.githubusercontent.com/93202824/176448563-cd9ef588-a812-4e2f-9078-55b9c6305847.png)
 
@@ -37,9 +38,12 @@ Input is the polygon file in .json format.
 
 ### Example of use.
 #### Example of lfe_coordinates
-file="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json" <br />
+```python
+file="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json"
 timestamps, freqs, feature, id_ = lfe_coordinates(file)
-    
+```    
 #### Example of make_dataframe
-file="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json" <br />
+```python
+file="C:/Users/eliza/Desktop/git_folder/ML_For_SKR_Code/selected_polygons/alllfes.json"
 df=make_dataframe(file)
+```
